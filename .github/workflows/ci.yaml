@@ -19,9 +19,9 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
 
-    - name: Set up Go 1.22.5
+    - name: Set up Go 1.22
       uses: actions/setup-go@v2
       with:
         go-version: 1.22
@@ -87,7 +87,7 @@ jobs:
 
     - name: Commit and push changes
       run: |
-        git config --global user.email radhshiny@gmail.com"
+        git config --global user.email "radhshiny@gmail.com"
         git config --global user.name "Radhshiny"
         git add helm/go-web-app-chart/values.yaml
         git commit -m "Update tag in Helm chart"
